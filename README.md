@@ -1,17 +1,16 @@
-# Widget C-TIP regio Friesland
+# C-TIP widget Marrekrite
 
-C-TIP is het platform voor het centraal beheer van zowel uw toeristisch aanbod als recreatieve routes uit uw regio. Met deze widget is het mogelijk om data uit C-TIP te op uw eigen site te plaatsen. 
+C-TIP is het platform voor het centraal beheer van zowel uw toeristisch aanbod als recreatieve routes uit uw regio. Met deze widget is het mogelijk om data uit C-TIP op uw eigen site te tonen. 
 
 ## Vereisten
 
 Deze widget vereist het gebruik van C-TIP en de bijbehorende proxy. 
 
-
 ## Installatie
 
 ### Download
 
-Je kunt de laatste versie van de widget krijgen op deze github onder release [releases]
+U kunt de laatste versie van de widget krijgen op deze github onder [releases]
 
 ## Voorbeelden
 
@@ -60,31 +59,31 @@ $( "#ctip-widget" ).ctipWidget( {
 
 ## Opties
 
-Bij het starten van de widget kunnen er een aantal opties worden meegegeven. Deze zijn hier onder beschreven
+Bij het starten van de widget kunnen er een aantal opties worden meegegeven. Deze worden hieronder beschreven.
 
 ### mapSelector
-Jquery selector voor het kaart element. Deze selector is verplicht. Dit mog  alleen een id(#) zijn geen classe.
+Jquery selector voor het kaart-element. Deze selector is verplicht. Dit mag  alleen een id(#) zijn, geen class.
 
 ```js
     mapSelector: "#map",
 ```
 
 ### layersSelector
-Jquery selector voor het kaart laag elementen. Deze selector is verplicht. Dit mog  alleen een id(#) zijn geen classe.
+Jquery selector voor de kaartlaag-elementen. Deze selector is verplicht. Dit mag  alleen een id(#) zijn, geen class.
 
 ```js
       layersSelector: "#layers",
 ```
 
 ### layerTemplateSelector
-Jquery selector voor het legenda element. Deze selector is verplicht. Dit mog  alleen een id(#) zijn geen classe.
+Jquery selector voor het legenda-element. Deze selector is verplicht. Dit mag  alleen een id(#) zijn, geen class.
 
 ```js
     layerTemplateSelector: "#layer-template", 
 ```
 
 ### center
-De kaart begint op een vaste locatie via de center optie is dit aan te passen. 
+De kaart begint op een vaste locatie. Met de center-optie is deze locatie aan te passen. 
 
 ```js
     center: {
@@ -94,16 +93,15 @@ De kaart begint op een vaste locatie via de center optie is dit aan te passen.
             }
 ```
 
-
 ### vectorStyleUrl
-De url waar de tegels van de kaart vanuit ingeladen moeten worden. De widget maakt gebruik van vector tiles en is op dit moment niet te gebruiken met png tiles. 
+De URL waar de tegels van de kaart van ingeladen moeten worden. De widget maakt gebruik van vector tiles en is op dit moment niet te gebruiken met PNG-tiles. 
 
 ```js
     vectorStyleUrl: "http://91.208.60.51:8080/styles/marrekrite/style.json",
 ```
 
 ### proxyUrl
-De url waar de data van daan gehaald moet worden. In versie 1.0 is het slechts mogelijk 1 url op te halen. 
+De URL waar de data vandaan gehaald moet worden. In versie 1.0 is het slechts mogelijk 1 URL op te halen. 
 
 ```js
     proxyUrl: "http://ctip-proxy.app/network/18155/children",
@@ -111,13 +109,13 @@ De url waar de data van daan gehaald moet worden. In versie 1.0 is het slechts m
 
 
 ## Toekomstige toevoegingen
-- Meerdere netwerken tegelijk inladen
+- Meerdere netwerken samen inladen
 - Layers hernoemen
 - Meerdere attributen
 
 
 ## Opdracht
-Deze widget is gemaakt in opdracht van Folkermsa Route & Sign voor Regio Friesland door RAPIDE Internet
+Deze widget is in opdracht van Folkermsa Route & Sign uitgevoerd door RAPIDE Internet.
 
 ![Folkersma][folkersma]
 
