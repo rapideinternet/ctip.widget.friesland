@@ -17,44 +17,81 @@ U kunt de laatste versie van de widget krijgen op deze github onder [releases]
 ### Javascript
 
 ```js
-$( "#ctip-widget" ).ctipWidget( {
-                    mapSelector: "#map",
-                    layersSelector: "#layers",
-                    proxyUrl: "http://ctip-proxy.app/network/18155/children",
-                    layerName: "Steigers",
-                    layerTemplateSelector: "#layer-template", 
-                    vectorStyleUrl: "http://91.208.60.51:8080/styles/marrekrite/style.json",
-                    center: {
-                        lat: 53.488505,
-                        lng: 6.191028,
-                        zoom: 14
-                    }
-                });
-            });
-```
+				$( "#ctip-widget" ).ctipWidget( {
+				    mapSelector: "#map",
+				    layersSelector: "#layers",
+				    proxyUrl: "http://proxy.ctip.rapide.software",
+				    layers: [
+				        {
+				            name: "FKP Friesland",
+				            url: "/friesland/fietsen"
+				        }, 
+				        {
+				            name: "Marrekrite Steigers",
+				            url: "/friesland/plus"
+				        }
+				    ],
+				    layerTemplateSelector: "#layer-template", 
+				    vectorStyleUrl: "http://91.208.60.51:8080/styles/marrekrite/style.json",
+				    center: {
+				        lat: 53.112003,
+				        lng: 5.8169843,
+				        zoom: 11
+				    }
+				});
 
+```
 ### CSS
 
 ```css
-            #ctip-widget { height:100%; font-family:arial; font-size:14px; }
-            #ctip-widget #map { height: 100%; width:80%; float:left;  }
-            #ctip-widget #map .ctip-icon { width:16px; height:16px; background-color:red; border-radius:100px; }
-            #ctip-widget #layers { width: calc(20% - 40px); height:100%; float:left; padding:20px; }
-            #ctip-widget .leaflet-center {
-                width: 40%;
-                margin-left: auto;
-                margin-right: auto;
-                position: relative;
-            }
-            #ctip-widget .leaflet-container .leaflet-control-geosearch input {
-                width: 100%;
-                height: 28px;
-                padding: 0;
-                text-indent: 8px;
-                background: rgba(255, 255, 255, 0.75);          
-                border-radius: 4px;
-                border: none;
-            }
+			body, html {
+			    height:100%;
+			    margin: 0;
+			    padding:0;
+			}
+			#ctip-widget {
+			    height:100%;
+			    font-family: arial, serif;
+			    font-size:14px;
+			}
+			#ctip-widget #map {
+			    height: 100%;
+			    width:80%;
+			    float:left;
+			}
+			#ctip-widget #map .ctip-icon {
+			    width:16px;
+			    height:16px;
+			    background-color:red;
+			    border-radius:100px;
+			}
+			#ctip-widget #map .ctip-line {
+			    stroke: green;
+			    fill: none;
+			    stroke-dasharray: 10,10;
+			    stroke-width: 5;
+			}
+			#ctip-widget #layers {
+			    width: calc(20% - 40px);
+			    height:100%;
+			    float:left;
+			    padding:20px;
+			}
+			#ctip-widget .leaflet-center {
+			    width: 40%;
+			    margin-left: auto;
+			    margin-right: auto;
+			    position: relative;
+			}
+			#ctip-widget .leaflet-container .leaflet-control-geosearch input {
+			    width: 100%;
+			    height: 28px;
+			    padding: 0;
+			    text-indent: 8px;
+			    background: rgba(255, 255, 255, 0.75);			
+			    border-radius: 4px;
+			    border: none;
+			}
 ```
 
 ## Opties
@@ -87,10 +124,10 @@ De kaart begint op een vaste locatie. Met de center-optie is deze locatie aan te
 
 ```js
     center: {
-                lat: 53.488505,
-                lng: 6.191028,
-                zoom: 14
-            }
+        lat: 53.112003,
+        lng: 5.8169843,
+        zoom: 11
+    }
 ```
 
 ### vectorStyleUrl
@@ -101,17 +138,28 @@ De URL waar de tegels van de kaart van ingeladen moeten worden. De widget maakt 
 ```
 
 ### proxyUrl
-De URL waar de data vandaan gehaald moet worden. In versie 1.0 is het slechts mogelijk 1 URL op te halen. 
+De basis URL waar de data vandaan gehaald moet worden. 
 
 ```js
-    proxyUrl: "http://ctip-proxy.app/network/18155/children",
+    proxyUrl: "http://proxy.ctip.rapide.software"
 ```
 
+### layers
+De lagen die geladen moeten worden. Per laag moet de naam van de laag en de extensie van de URL waar de data vandaan gehaald moet worden aangegeven.  
 
-## Toekomstige toevoegingen
-- Meerdere netwerken samen inladen
-- Layers hernoemen
-- Meerdere attributen
+```js
+    layers: [
+        {
+            name: "FKP Friesland",
+            url: "/friesland/fietsen"
+        }, 
+        {
+            name: "Marrekrite Steigers",
+            url: "/friesland/plus"
+        }
+    ]
+```
+
 
 
 ## Opdracht
