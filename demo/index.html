@@ -4,15 +4,43 @@
 		<title>CTIP Widget</title>
 	
 	 	<link href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css" rel="stylesheet" />
-		<link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.css" rel='stylesheet' />
+		<link href='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
 		<link href="../dist/jquery.ctip.widget.css" rel='stylesheet' />
 		
 		<style>
-			body, html { height:100%; margin:0px; padding:0x; }
-			#ctip-widget { height:100%; font-family:arial; font-size:14px; }
-			#ctip-widget #map { height: 100%; width:80%; float:left;  }
-			#ctip-widget #map .ctip-icon { width:16px; height:16px; background-color:red; border-radius:100px; }
-			#ctip-widget #layers { width: calc(20% - 40px); height:100%; float:left; padding:20px; }
+			body, html {
+				height:100%;
+				margin: 0;
+				padding:0;
+			}
+			#ctip-widget {
+				height:100%;
+				font-family: arial, serif;
+				font-size:14px;
+			}
+			#ctip-widget #map {
+				height: 100%;
+				width:80%;
+				float:left;
+			}
+			#ctip-widget #map .ctip-icon {
+				width:16px;
+				height:16px;
+				background-color:red;
+				border-radius:100px;
+			}
+			#ctip-widget #map .ctip-line {
+				stroke: green;
+				fill: none;
+				stroke-dasharray: 10,10;
+				stroke-width: 5;
+			}
+			#ctip-widget #layers {
+				width: calc(20% - 40px);
+				height:100%;
+				float:left;
+				padding:20px;
+			}
 			#ctip-widget .leaflet-center {
 				width: 40%;
 				margin-left: auto;
@@ -47,13 +75,18 @@
 					mapSelector: "#map",
 					layersSelector: "#layers",
 					proxyUrl: "",
-					layerName: "Objecten",
+					layers: [
+					    {
+                        name: "",
+                        url: ""
+                    	}
+					],
 					layerTemplateSelector: "#layer-template", 
 					vectorStyleUrl: "http://91.208.60.51:8080/styles/marrekrite/style.json",
 					center: {
-						lat: 53.488505,
-						lng: 6.191028,
-						zoom: 14
+						lat: 53.112003,
+						lng: 5.8169843,
+						zoom: 11
 					}
 				});
 			} );
