@@ -23,8 +23,12 @@ $( "#ctip-widget" ).ctipWidget( {
     proxyUrl: "http://proxy.ctip.rapide.software",
     layers: [
         {
-            name: "FKP Friesland",
+            name: "FKP Fryslân",
             url: "/friesland/fietsen"
+        }, 
+        {
+            name: "WNT Fryslân",
+            url: "/friesland/wandelen"
         }, 
         {
             name: "Marrekrite Steigers",
@@ -150,8 +154,12 @@ De lagen die geladen moeten worden. Per laag moet de naam van de laag en de exte
 ```js
     layers: [
         {
-            name: "FKP Friesland",
+            name: "FKP Fryslân",
             url: "/friesland/fietsen"
+        }, 
+        {
+            name: "FKP Fryslân",
+            url: "/friesland/wandelen"
         }, 
         {
             name: "Marrekrite Steigers",
