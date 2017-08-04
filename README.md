@@ -158,7 +158,7 @@ De lagen die geladen moeten worden. Per laag moet de naam van de laag en de exte
             url: "/friesland/fietsen"
         }, 
         {
-            name: "FKP Fryslân",
+            name: "WNT Fryslân",
             url: "/friesland/wandelen"
         }, 
         {
