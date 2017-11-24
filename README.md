@@ -31,6 +31,10 @@ $( "#ctip-widget" ).ctipWidget( {
             url: "/friesland/wandelen"
         }, 
         {
+            name: "TOP Fryslân",
+            url: "/friesland/top"
+        }, 
+        {
             name: "Marrekrite Steigers",
             url: "/friesland/plus"
         }
@@ -160,6 +164,10 @@ De lagen die geladen moeten worden. Per laag moet de naam van de laag en de exte
         {
             name: "WNT Fryslân",
             url: "/friesland/wandelen"
+        }, 
+        {
+            name: "TOP Fryslân",
+            url: "/friesland/top"
         }, 
         {
             name: "Marrekrite Steigers",
