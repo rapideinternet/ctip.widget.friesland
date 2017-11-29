@@ -6,6 +6,8 @@ C-TIP is het platform voor het centraal beheer van zowel uw toeristisch aanbod a
 
 Deze widget vereist het gebruik van C-TIP en de bijbehorende proxy. 
 
+**Belangrijk**: Om de locatieservice van deze widget te kunnen gebruiken, dient de pagina in HTTPS geserveerd te worden.
+
 ## Installatie
 
 ### Download
@@ -20,7 +22,7 @@ U kunt de laatste versie van de widget krijgen op deze github onder [releases]
 $( "#ctip-widget" ).ctipWidget( {
     mapSelector: "#map",
     layersSelector: "#layers",
-    proxyUrl: "http://proxy.ctip.rapide.software",
+    proxyUrl: "https://proxy.ctip.rapide.software",
     layers: [
         {
             name: "FKP Fryslân",
@@ -40,7 +42,7 @@ $( "#ctip-widget" ).ctipWidget( {
         }
     ],
     layerTemplateSelector: "#layer-template", 
-    vectorStyleUrl: "http://91.208.60.51:8080/styles/marrekrite/style.json",
+    vectorStyleUrl: "https://91.208.60.51:8080/styles/marrekrite/style.json",
     center: {
         lat: 53.112003,
         lng: 5.8169843,
@@ -142,14 +144,14 @@ center: {
 De URL waar de tegels van de kaart van ingeladen moeten worden. De widget maakt gebruik van vector tiles en is op dit moment niet te gebruiken met PNG-tiles. 
 
 ```js
-    vectorStyleUrl: "http://91.208.60.51:8080/styles/marrekrite/style.json",
+    vectorStyleUrl: "https://91.208.60.51:8080/styles/marrekrite/style.json",
 ```
 
 ### proxyUrl
 De basis URL waar de data vandaan gehaald moet worden. 
 
 ```js
-    proxyUrl: "http://proxy.ctip.rapide.software"
+    proxyUrl: "https://proxy.ctip.rapide.software"
 ```
 
 ### layers
