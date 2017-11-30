@@ -42,7 +42,7 @@ $( "#ctip-widget" ).ctipWidget( {
         }
     ],
     layerTemplateSelector: "#layer-template", 
-    vectorStyleUrl: "https://91.208.60.51:8080/styles/marrekrite/style.json",
+    vectorStyleUrl: "https://tile-maps-server.rapide.software/styles/marrekrite/style.json",
     center: {
         lat: 53.112003,
         lng: 5.8169843,
@@ -144,7 +144,7 @@ center: {
 De URL waar de tegels van de kaart van ingeladen moeten worden. De widget maakt gebruik van vector tiles en is op dit moment niet te gebruiken met PNG-tiles. 
 
 ```js
-    vectorStyleUrl: "https://91.208.60.51:8080/styles/marrekrite/style.json",
+    vectorStyleUrl: "https://tile-maps-server.rapide.software/styles/marrekrite/style.json",
 ```
 
 ### proxyUrl
