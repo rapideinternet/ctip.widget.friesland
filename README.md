@@ -22,7 +22,7 @@ U kunt de laatste versie van de widget krijgen op deze github onder [releases]
 $( "#ctip-widget" ).ctipWidget( {
     mapSelector: "#map",
     layersSelector: "#layers",
-    proxyUrl: "https://proxy.ctip.rapide.software",
+    proxyUrl: "https://proxy.c-tip.com",
     layers: [
         {
             name: "FKP Fryslân",
@@ -151,7 +151,7 @@ De URL waar de tegels van de kaart van ingeladen moeten worden. De widget maakt 
 De basis URL waar de data vandaan gehaald moet worden. 
 
 ```js
-    proxyUrl: "https://proxy.ctip.rapide.software"
+    proxyUrl: "https://proxy.c-tip.com"
 ```
 
 ### layers
